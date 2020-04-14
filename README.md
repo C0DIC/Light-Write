@@ -18,5 +18,6 @@ Features:
       3.2 Save
       3.3 New File
    
-4. Soon
+4. Command Line
+      4.1 Watch 2.Changing font size
 
