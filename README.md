@@ -1,6 +1,8 @@
 # SimpleNoteApp
 Simple Note App
 
+Version 1.0
+
 Features:
 1. Changing theme :
    1.1 Black
