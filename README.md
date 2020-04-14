@@ -1,4 +1,4 @@
-# SimpleNoteApp
+# Light Write
 Simple Note App
 
 Version 1.0
