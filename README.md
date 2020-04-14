@@ -19,5 +19,5 @@ Features:
       3.3 New File
    
 4. Command Line
-      4.1 Watch 2.Changing font size
+      4.1 Watch "2.Changing font size"
 
