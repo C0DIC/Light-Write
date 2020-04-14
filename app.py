@@ -31,7 +31,8 @@ def new_file():
 win = Tk()
 win.title('Light Write')
 win.config(bg = '#323233')
-#win.iconbitmap(r'/home/Naza/TIMA/Python/Idea/s600.')
+win.minsize(width = '600', height = '500')
+win.maxsize(width = '1000', height = '900')
 
 txt_place = Text(win, insertbackground = 'gray', bd = 1)
 txt_place.pack(fill = BOTH, expand = True)
@@ -107,8 +108,7 @@ def dark_theme():
 
 def font_size():
 	try:
-		i = txt_place2.get()
-		if i == '\n':
+		if (i := txt_place2.get()) == '\n':
 			pass
 		elif int(i) < 18 and int(i) > 9:
 			txt_place.config(font = ('Sans', i))
@@ -125,11 +125,9 @@ theme_menu.add_command(label = 'Dark', command = dark_theme)
 
 font_menu.add_command(label = 'Size', command = font_size)
 
-
 menu.add_cascade(label= 'File', menu = new_item)
 menu.add_cascade(label = 'Themes', menu = theme_menu)
 menu.add_cascade(label = 'Commands', menu = font_menu)
 
 win.config(menu=menu)
-
 win.mainloop()
