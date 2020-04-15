@@ -32,3 +32,8 @@ Features:
 2.1 Write: Number from 10 to 17
 
 3.3 Write: Save(save, s, S); Open(open, o, O); New(Clear, clear, cl, Cl, New, new, n)
+
+# Update 2.0
+
+1. Re-writed code
+2. Redesigned
