@@ -1,133 +1,85 @@
-from tkinter import *
-from tkinter import ttk
-from tkinter import scrolledtext
-from tkinter import Menu
-from tkinter import filedialog
+from tkinter import * 
+from tkinter import ttk, scrolledtext, Menu, filedialog
 
-def open_file():
-	try:
-		global new_item
-		files = filedialog.askopenfile(mode = 'r')
-		in_d = files.read()
-		txt_place.delete('1.0', END)
-		txt_place.insert('1.0', in_d)
-	except (UnicodeDecodeError, AttributeError):
-		pass
+save_commands = ['Save', 'save', 's', 'S']
+open_commands = ['Open', 'open', 'o', 'O']
+clear_commands = ['Clear', 'clear', 'cl', 'Cl', 'New', 'new', 'n']
 
+black_commands = ['Black', 'black', 'b']
+white_commands = ['White', 'white', 'w']
+sky_commands = ['Sky', 'sky']
 
 def save_file():
-	try:
-		files = filedialog.asksaveasfile(mode = 'w')
-		in_d = txt_place.get('1.0', END)
-		files.write(in_d)
-	except AttributeError:
-		pass
+			try:
+				files = filedialog.asksaveasfile(mode = 'w')
+				data = write.get('1.0', END)
+				files.write(data)
+			except AttributeError:
+				pass
 
+def open_file():
+			try:
+				global new_item
+				files = filedialog.askopenfile(mode = 'r')
+				data = files.read()
+				write.delete('1.0', END)
+				write.insert('1.0', data)
+			except (UnicodeDecodeError, AttributeError):
+				pass
 
 def new_file():
-	global new_item
-	txt_place.delete('1.0', END)
+			global new_item
+			write.delete('1.0', END)
 
-win = Tk()
-win.title('Light Write')
-win.config(bg = '#323233')
-win.minsize(width = '600', height = '500')
-win.maxsize(width = '1000', height = '900')
+def black():
+	app.config(bg = 'black')
+	write.config(bg = 'black', fg = 'white', highlightbackground = 'black', insertbackground = 'white')
+	comm_line.config(bg = 'black', fg = 'white', highlightbackground = 'black', insertbackground = 'white')
+	gen_button.config(bg = 'black', fg = 'white', highlightbackground = 'black')
 
-txt_place = Text(win, insertbackground = 'gray', bd = 1)
-txt_place.pack(fill = BOTH, expand = True)
-txt_place.config(bg = '#323233',fg = 'gray',selectbackground = 'gray')
-txt_place.config(highlightbackground = '#323233', font = ('Sans', 11))
-txt_place.insert(INSERT, '')
+def white():
+	app.config(bg = 'white')
+	write.config(bg = 'white', fg = 'black', highlightbackground = 'white', insertbackground = 'black')
+	comm_line.config(bg = 'white', fg = 'black', highlightbackground = 'white', insertbackground = 'black')
+	gen_button.config(bg = 'white', fg = 'black', highlightbackground = 'white')
 
-txt_place2 = Entry(win, width = 20, bg = '#323233' , bd = 1)
-txt_place2.config(font = ('Sans', 11), highlightbackground = '#323233')
-txt_place2.config(fg = 'gray')
-txt_place2.pack(fill = BOTH, expand = True)
+def sky():
+	app.config(bg = '#2a2d4a')
+	write.config(bg = '#2a2d4a', fg = 'white', highlightbackground = '#2a2d4a', insertbackground = 'white')
+	comm_line.config(bg = '#2a2d4a', fg = 'white', highlightbackground = '#2a2d4a', insertbackground = 'white')
+	gen_button.config(bg = '#2a2d4a', fg = 'white', highlightbackground = '#2a2d4a')
 
-menu = Menu(win, bd = 0)
-new_item = Menu(menu, tearoff=0, bd = 1)
-theme_menu = Menu(menu, tearoff = 0, bd = 1)
-font_menu = Menu(menu, tearoff = 0, bd = 1)
+def global_func():
+	if (comm := comm_line.get()) in save_commands:
+		save_file()
+	elif comm  in open_commands:
+		open_file()
+	elif comm in clear_commands:
+		new_file()
+	elif comm in black_commands:
+		black()
+	elif comm in white_commands:
+		white()
+	elif comm in sky_commands:
+		sky()
+	elif int(comm) > 9 and int(comm) < 18:
+		write.config(font = ('Sans', int(comm)))
 
-menu.config(bg = '#323233',fg = 'gray')
-new_item.config(bg = '#323233',fg = 'gray')
-theme_menu.config(bg = '#323233',fg = 'gray')
-font_menu.config(bg = '#323233',fg = 'gray')
+app = Tk()
+app.title('Light Write')
+app.config(bg = 'white')
+app.minsize(width = '660', height = '500')
+app.maxsize(width = '1000', height = '950')
 
-def black_theme():
-	win.config(bg = 'black')
-	new_item.config(bg = 'black',fg = 'white')
-	theme_menu.config(bg = 'black',fg = 'white')
+write = Text(app, bg = 'white', bd = 1)
+write.focus()
+write.pack(expand = True, fill = BOTH)
 
-	txt_place.config(highlightbackground = 'black')
-	txt_place.config(selectbackground = 'white')
-	txt_place.config(bg = 'black',fg = 'white', insertbackground = 'white')
+comm_line = Entry(app, bg = 'white', bd = 1)
+comm_line.config(width = 70)
+comm_line.pack(side = LEFT, fill = BOTH, expand = True)
 
-	txt_place2.config(highlightbackground = 'black')
-	txt_place2.config(selectbackground = 'white')
-	txt_place2.config(bg = 'black',fg = 'white', insertbackground = 'white')
+gen_button = Button(app, text = 'Do', bg = 'white', command = global_func, bd = 1)
+gen_button.pack(fill = BOTH, expand = True, side = RIGHT)
 
-	font_menu.config(bg = 'black',fg = 'white')
-
-	menu.config(bg = 'black',fg = 'white')
-
-def white_theme():
-	win.config(bg = 'white')
-	new_item.config(bg = 'white',fg = 'black')
-	theme_menu.config(bg = 'white',fg = 'black')
-
-	txt_place.config(highlightbackground = 'white')
-	txt_place.config(selectbackground = 'gray')
-	txt_place.config(bg = 'white',fg = 'black', insertbackground = 'black')
-
-	font_menu.config(bg = 'white',fg = 'black')
-
-	txt_place2.config(highlightbackground = 'white')
-	txt_place2.config(selectbackground = 'gray')
-	txt_place2.config(bg = 'white',fg = 'black', insertbackground = 'black')
-
-	menu.config(bg = 'white',fg = 'black')
-
-def dark_theme():
-	win.config(bg = '#323233')
-	new_item.config(bg = '#323233',fg = 'gray')
-	theme_menu.config(bg = '#323233',fg = 'gray')
-
-	txt_place.config(highlightbackground = '#323233')
-	txt_place.config(selectbackground = 'gray')
-	txt_place.config(bg = '#323233',fg = 'gray', insertbackground = 'gray')
-
-	txt_place2.config(highlightbackground = '#323233')
-	txt_place2.config(selectbackground = 'gray')
-	txt_place2.config(bg = '#323233',fg = 'gray', insertbackground = 'gray')
-
-
-	font_menu.config(bg = '#323233',fg = 'gray')
-	menu.config(bg = '#323233',fg = 'gray')
-
-def font_size():
-	try:
-		if (i := txt_place2.get()) == '\n':
-			pass
-		elif int(i) < 18 and int(i) > 9:
-			txt_place.config(font = ('Sans', i))
-	except ValueError:
-		pass
-
-new_item.add_command(label = 'New', command = new_file)
-new_item.add_command(label = 'Open', command = open_file)
-new_item.add_command(label = 'Save', command = save_file)
-
-theme_menu.add_command(label = 'Light', command = white_theme)
-theme_menu.add_command(label = 'Black', command = black_theme)
-theme_menu.add_command(label = 'Dark', command = dark_theme)
-
-font_menu.add_command(label = 'Size', command = font_size)
-
-menu.add_cascade(label= 'File', menu = new_item)
-menu.add_cascade(label = 'Themes', menu = theme_menu)
-menu.add_cascade(label = 'Commands', menu = font_menu)
-
-win.config(menu=menu)
-win.mainloop()
+app.mainloop()
