@@ -38,3 +38,11 @@ Features:
 
 1. Re-writed code
 2. Redesigned
+
+# Installation
+
+1. git clone https://github.com/Moonwalker1996/Light-Write
+2. cd Light-Write
+3. cd 'EXEcutable file (Alpha)'
+4. chmod +x 'Light Write'
+5. ./'Light Write' or move file where you want and click on it
