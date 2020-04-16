@@ -1,5 +1,5 @@
-# Light Write 2.0.1
 # Light Write 2.1: Coming Soon...
+# Light Write 2.0.1
 Simple Note App
 
 Version 2.0.1
