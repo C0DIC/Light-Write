@@ -1,7 +1,8 @@
-# Light Write
+# Light Write 2.0.1
+# Light Write 2.1: Coming Soon...
 Simple Note App
 
-Version 2.0
+Version 2.0.1
 
 Features:
 1. Changing theme :
