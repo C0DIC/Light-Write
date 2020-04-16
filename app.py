@@ -3,7 +3,7 @@ from tkinter import ttk, scrolledtext, Menu, filedialog
 
 save_commands = ['Save', 'save', 's', 'S']
 open_commands = ['Open', 'open', 'o', 'O']
-clear_commands = ['Clear', 'clear', 'cl', 'Cl', 'New', 'new', 'n']
+clear_commands = ['Clear', 'clear', 'cl', 'Cl', 'New', 'new', 'n', 'N']
 
 black_commands = ['Black', 'black', 'b']
 white_commands = ['White', 'white', 'w']
