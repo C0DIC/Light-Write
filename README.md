@@ -45,4 +45,4 @@ Features:
 2. cd Light-Write
 3. cd app
 4. chmod +x lwapp
-5. ./lwapp'Light Write' or move file where you want and click on it
+5. ./lwapp or move file where you want and click on it
