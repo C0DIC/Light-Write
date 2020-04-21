@@ -35,10 +35,11 @@ Command Line:
 3.3 Write: Save(save, s, S); Open(open, o, O); New(Clear, clear, cl, Cl, New, new, n)
 
 Hot Keys:
-1. Ctrl+S (save)
+1. Ctrl+S (save file)
 2. Ctrl+N (new file)
 3. Ctrl+O (open file)
 4. Ctrl+B or W or K (changing theme)
+5. Default keys like Ctrl+ V,C and etc
 
 # Installation
 
