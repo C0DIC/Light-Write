@@ -1,8 +1,7 @@
-# Light Write 2.1: Coming Soon...
-# Light Write 2.0.5
+# Light Write 2.1
 Simple Note App
 
-Version 2.0.5
+Version 2.1
 
 Features:
 1. Changing theme :
@@ -20,10 +19,11 @@ Features:
       3.3 New File
    
 4. Command Line
-      4.1 Watch "Using Of Command Line"
+      4.1 Watch "Using Of Command Line and Hot Keys"
 
-# Using Of Command Line
+# Using Of Command Line and Hot Keys
 
+Command Line:
 1. Changing theme
 2. Changing size
 3. Work with file
@@ -34,10 +34,11 @@ Features:
 
 3.3 Write: Save(save, s, S); Open(open, o, O); New(Clear, clear, cl, Cl, New, new, n)
 
-# Update 2.0
-
-1. Re-writed code
-2. Redesigned
+Hot Keys:
+1. Ctrl+S (save)
+2. Ctrl+N (new file)
+3. Ctrl+O (open file)
+4. Ctrl+B or W or K (changing theme)
 
 # Installation
 
