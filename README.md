@@ -47,5 +47,5 @@ Hot Keys:
 # Update 2.8.2
 
 1. Re-writed code
-2. Re-designed (deletede "Do" button)
+2. Re-designed (deleted "Do" button)
 3. Added more hot keys
