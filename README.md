@@ -1,5 +1,3 @@
-![alt text](https://drive.google.com/file/d/1436dVUL8TyV6IP0tuR1-ab76HDJHoM5-/view)
-
 # Light Write 2.8.2
 Simple Note App
 
