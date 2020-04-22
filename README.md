@@ -1,4 +1,4 @@
-# Light Write 2.8.2
+# Light Write 2.8.3
 ![alt text](https://github.com/Moonwalker1996/Light-Write/blob/master/screenshots/banner2.jpg)
 
 Features:
@@ -43,9 +43,3 @@ Hot Keys:
 3. cd app
 4. chmod +x lwapp
 5. ./lwapp or move file where you want and click on it
-
-# Update 2.8.2
-
-1. Re-writed code
-2. Re-designed (deleted "Do" button)
-3. Added more hot keys
