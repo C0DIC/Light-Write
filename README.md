@@ -1,7 +1,5 @@
-# Light Write 2.1
+# Light Write 2.8.2
 Simple Note App
-
-Version 2.1
 
 Features:
 1. Changing theme :
@@ -24,22 +22,19 @@ Features:
 # Using Of Command Line and Hot Keys
 
 Command Line:
-1. Changing theme
-2. Changing size
-3. Work with file
+1. Changing size
 
-1.1 Write: Black(black,b); White(white, w); Sky(sky)
-
-2.1 Write: Number from 10 to 17
-
-3.3 Write: Save(save, s, S); Open(open, o, O); New(Clear, clear, cl, Cl, New, new, n)
+1.1 Write: Number from 10 to 17
 
 Hot Keys:
-1. Ctrl+S (save file)
-2. Ctrl+N (new file)
-3. Ctrl+O (open file)
-4. Ctrl+B or W or K (changing theme)
-5. Default keys like Ctrl+ V,C and etc
+1. Ctrl + S (save file)
+2. Ctrl + N (new file)
+3. Ctrl + O (open file)
+4. Ctrl + B or W or K (changing theme)
+5. Ctrl + Down arrow or Up arrow (to change write place)
+6. Ctrl + D (do command in command line)
+7. Esc (close app)
+8. Default keys like Ctrl+ V,C and etc
 
 # Installation
 
@@ -48,3 +43,9 @@ Hot Keys:
 3. cd app
 4. chmod +x lwapp
 5. ./lwapp or move file where you want and click on it
+
+# Update 2.8.2
+
+1. Re-writed code
+2. Re-designed (deletede "Do" button)
+3. Added more hot keys
