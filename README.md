@@ -1,5 +1,5 @@
 # Light Write 2.8.2
-![alt text](https://github.com/Moonwalker1996/Light-Write/blob/master/screenshots/banner.jpg)
+![alt text](https://github.com/Moonwalker1996/Light-Write/blob/master/screenshots/banner2.jpg)
 
 Features:
 1. Changing theme :
