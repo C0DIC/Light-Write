@@ -1,9 +1,14 @@
 from tkinter import * 
-from tkinter import ttk, scrolledtext, Menu, filedialog
+from tkinter import scrolledtext, filedialog
 
 def save_file(event):
 	try:
-		files = filedialog.asksaveasfile(mode = 'w')
+		files = filedialog.asksaveasfile(mode = 'w', 
+		filetypes = (('Python', '*.py'), ('Text', '*.txt'),('Ruby', '*.rb'), ('Nim', '*.nim'), ('HTML', '*.html'),
+		('C##', '*.csharp'), ('C++', '*.cpp'), ('Rust', '*.rust'), ('CSS', '*.css'),
+		('GO', '*.go'), ('PHP', '*.php'),('Java', '*.java'), ('JavaScript', '*.js'), ('TypeScript', '*.ts'),
+		('Scala', '*.sc')))
+		app.title("Light Write: " + str(files.name))
 		data = write.get('1.0', END)
 		files.write(data)
 	except AttributeError:
@@ -11,16 +16,16 @@ def save_file(event):
 
 def open_file(event):
 	try:
-		global new_item
 		files = filedialog.askopenfile(mode = 'r')
+		app.title("Light Write: " + str(files.name))
 		data = files.read()
 		write.delete('1.0', END)
 		write.insert('1.0', data)
 	except (UnicodeDecodeError, AttributeError):
-		pass
+		comm_line.insert(2, "It's not a text file")
 
 def new_file(event):
-	global new_item
+	app.title("Light Write - [UNSAVED]")
 	write.delete('1.0', END)
 
 def black(event):
@@ -39,9 +44,14 @@ def sky(event):
 	comm_line.config(bg = '#2a2d4a', fg = 'white', highlightbackground = '#2a2d4a', insertbackground = 'white')
 
 def size(event):
-	comm = comm_line.get()
-	if int(comm) > 9 and int(comm) < 18:
-		write.config(font = ('Sans', int(comm)))
+	try:
+		comm = comm_line.get()
+		if int(comm) > 9 and int(comm) < 18:
+			write.config(font = ('Sans', int(comm)))
+		else:
+			comm_line.insert(3, " | Only from 10 to 17")
+	except ValueError:
+		pass
 
 def focusing_d(event):
 	comm_line.focus()
