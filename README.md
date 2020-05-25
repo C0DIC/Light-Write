@@ -1,4 +1,4 @@
-# Light Write 2.9.2
+# Light Write 2.9.5
 ![alt text](https://github.com/Moonwalker1996/Light-Write/blob/master/screenshots/banner2.jpg)
 
 Features:
@@ -19,6 +19,10 @@ Features:
    
 4. Command Line
       4.1 Watch "Using Of Command Line and Hot Keys"
+
+# Creating App Directory
+
+You can create "LWFiles" directory by Ctrl+Shift+A, if you want to
 
 # Using Of Command Line and Hot Keys
 
