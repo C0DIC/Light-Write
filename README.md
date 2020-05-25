@@ -1,4 +1,4 @@
-# Light Write 2.9
+# Light Write 2.9.2
 ![alt text](https://github.com/Moonwalker1996/Light-Write/blob/master/screenshots/banner2.jpg)
 
 Features:
@@ -6,6 +6,7 @@ Features:
       1.1 Black
       1.2 White
       1.3 Sky
+      1.4 Cold
    
 2. Changing font size
       2.1 From 10 to 17
@@ -30,7 +31,7 @@ Hot Keys:
 1. Ctrl + S (save file)
 2. Ctrl + N (new file)
 3. Ctrl + O (open file)
-4. Ctrl + B or W or K (changing theme)
+4. Ctrl + B or W or K or L (changing theme)
 5. Ctrl + Down arrow or Up arrow (to change write place)
 6. Ctrl + D (do command in command line)
 7. Esc (close app)
