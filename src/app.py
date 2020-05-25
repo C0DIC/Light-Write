@@ -43,6 +43,11 @@ def sky(event):
 	write.config(bg = '#2a2d4a', fg = 'white', highlightbackground = '#2a2d4a', insertbackground = 'white')
 	comm_line.config(bg = '#2a2d4a', fg = 'white', highlightbackground = '#2a2d4a', insertbackground = 'white')
 
+def cold(event):
+	app.config(bg = "#afc2cc")
+	write.config(bg = "#afc2cc", fg = "#1b647a", highlightbackground = "#1b647a", insertbackground = "#1b647a")
+	comm_line.config(bg = "#afc2cc", fg = "#1b647a", highlightbackground = "#1b647a", insertbackground = "#1b647a")
+
 def size(event):
 	try:
 		comm = comm_line.get()
@@ -62,7 +67,6 @@ def focusing_u(event):
 def esc(event):
 	app.destroy()
 
-
 app = Tk()
 app.title('Light Write')
 app.config(bg = 'white')
@@ -76,6 +80,7 @@ app.bind('<Control-n>', new_file)
 app.bind('<Control-b>', black)
 app.bind('<Control-k>', sky)
 app.bind('<Control-w>', white)
+app.bind('<Control-l>', cold)
 
 app.bind('<Control-d>', size)
 app.bind('<Control-Up>', focusing_u)
