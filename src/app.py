@@ -5,7 +5,7 @@ def save_file(event):
 	try:
 		files = filedialog.asksaveasfile(mode = 'w', 
 		filetypes = (('Python', '*.py'), ('Text', '*.txt'),('Ruby', '*.rb'), ('Nim', '*.nim'), ('HTML', '*.html'),
-		('C##', '*.csharp'), ('C++', '*.cpp'), ('Rust', '*.rust'), ('CSS', '*.css'),
+		('C##', '*.cs'), ('C++', '*.cpp'), ('Rust', '*.rs'), ('CSS', '*.css'),
 		('GO', '*.go'), ('PHP', '*.php'),('Java', '*.java'), ('JavaScript', '*.js'), ('TypeScript', '*.ts'),
 		('Scala', '*.sc')))
 		app.title("Light Write: " + str(files.name))
@@ -29,9 +29,9 @@ def new_file(event):
 	write.delete('1.0', END)
 
 def black(event):
-	app.config(bg = 'black')
-	write.config(bg = 'black', fg = 'white', highlightbackground = 'black', insertbackground = 'white')
-	comm_line.config(bg = 'black', fg = 'white', highlightbackground = 'black', insertbackground = 'white')
+		app.config(bg = 'black')
+		write.config(bg = 'black', fg = 'white', highlightbackground = 'black', insertbackground = 'white')
+		comm_line.config(bg = 'black', fg = 'white', highlightbackground = 'black', insertbackground = 'white')
 
 def white(event):
 	app.config(bg = 'white')
@@ -62,6 +62,7 @@ def focusing_u(event):
 def esc(event):
 	app.destroy()
 
+
 app = Tk()
 app.title('Light Write')
 app.config(bg = 'white')
@@ -71,6 +72,7 @@ app.maxsize(height = '800')
 app.bind('<Control-s>', save_file)
 app.bind('<Control-o>', open_file)
 app.bind('<Control-n>', new_file)
+
 app.bind('<Control-b>', black)
 app.bind('<Control-k>', sky)
 app.bind('<Control-w>', white)
