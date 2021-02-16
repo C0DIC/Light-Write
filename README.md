@@ -1,4 +1,4 @@
-# Light Write 2.9.5
+# Light Write v3.0 (unstable)
 ![alt text](https://github.com/Moonwalker1996/Light-Write/blob/master/screenshots/banner2.jpg)
 
 !!Some features may not work, it's not stable and ended update!!
