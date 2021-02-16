@@ -1,5 +1,5 @@
 # Light Write 2.9.5
-![alt text](https://github.com/Moonwalker1996/Light-Write/blob/master/screenshots/LWNewStyle.png)
+![alt text](https://github.com/Moonwalker1996/Light-Write/blob/master/screenshots/banner2.jpg)
 
 !!Some features may not work, it's not stable and ended update!!
 
