@@ -1,5 +1,7 @@
 # Light Write 2.9.5
-![alt text](https://github.com/Moonwalker1996/Light-Write/blob/master/screenshots/banner2.jpg)
+![alt text](https://github.com/Moonwalker1996/Light-Write/blob/master/screenshots/LWNewStyle.png)
+
+!!Some features may not work, it's not stable and ended update!!
 
 Features:
 1. Changing theme :
@@ -44,7 +46,7 @@ Hot Keys:
 # Installation
 
 1. git clone https://github.com/Moonwalker1996/Light-Write
-2. cd Light-Write
+2. cd Light-Write or cd Light-Write-master
 3. cd app
-4. chmod +x lwapp
-5. ./lwapp or move file where you want and click on it
+4. chmod +x lw
+5. ./lw or move file where you want and click on it
